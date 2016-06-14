@@ -1,0 +1,111 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Deployment status</title>
+    <script src="bower_components/vss-web-extension-sdk/lib/VSS.SDK.js"></script>
+    <script type="text/javascript">VSS.init({ usePlatformScripts: true });</script>
+    <script src="scripts/main.js"></script>
+    <script type="text/javascript">VSS.notifyLoadSucceeded();</script>
+
+    <script src="scripts/jsPlumb/jquery.min.js"></script>
+
+    <script src="scripts/jsPlumb/jquery-ui.min.js"></script>
+
+    <script src="scripts/jsPlumb/jquery.jsPlumb-1.4.1-all-min.js"></script>
+
+    <script src="scripts/ContextMenu/jquery-1.11.2.min.js"></script>
+    <script src="scripts/ContextMenu/jquery.contextmenu.js"></script>
+    <link rel="stylesheet" href="scripts/ContextMenu/jquery.contextmenu.css">
+
+    <style>
+        #environments {
+            overflow: visible;
+            margin-top: 30px;
+        }
+
+        #start {
+            background-color: yellow;
+            height: 15px;
+            width: 15px;
+            border-radius: 15px;
+        }
+
+        #details {
+            display: inline-block;
+            overflow: visible;
+            position: relative;
+            background-color: white;
+            box-shadow: 1px 1px;
+            margin-bottom: 5px;
+        }
+
+
+        .environment {
+            width: 30px;
+            height: 5px;
+            float: left;
+            padding-left: 10px;
+            padding-top: 10px;
+            color: blue;
+            border: 2px solid black;
+            background-color: #008B8B;
+            margin-right: 2px;
+        }
+
+        .container {
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+
+        .preApproval {
+            width: 15px;
+            height: 15px;
+            float: left;
+            border-top-left-radius: 5px 5px;
+            border-bottom-left-radius: 5px 5px;
+            margin-right: 2px;
+        }
+
+        .postApproval {
+            width: 15px;
+            height: 15px;
+            float: left;
+            -webkit-border-top-right-radius: 5px 5px;
+            -webkit-border-bottom-right-radius: 5px 5px;
+            margin-right: 0px;
+        }
+
+        .succeeded {
+            background-color: green;
+        }
+
+        .failed {
+            background-color: red;
+        }
+
+        .pending {
+            background-color: darkblue;
+        }
+
+        .running {
+            background-color: #ADD8E6;
+        }
+
+        .scheduled {
+            background-color: black;
+        }
+
+        .notStarted {
+            background-color: grey;
+        }
+    </style>
+</head>
+<body>
+    <div id="environments">
+
+    </div>
+
+    <div id="details"></div>
+
+</body>
+</html>
